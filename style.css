@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+    padding: 10px;
+    background: linear-gradient(to right,black,gray,red,skyblue);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li  a{
+    text-decoration: none;
+    color:white;
+}
+label,[type]{
+    display: none;
+    color: white;
+    border: 2px solid white;
+    padding: 5px;
+}
+@media only screen and  (max-width:640px){
+    nav{
+        height: 0px;
+        width: 100%;
+        overflow: hidden;
+    }
+    label{
+        display:inline;
+    }
+    [type]:checked+nav{
+        height: 100%;
+    }
+    nav ul{
+        flex-direction: column;
+        padding: 10px;
+        align-items: left;
+    }
+}
